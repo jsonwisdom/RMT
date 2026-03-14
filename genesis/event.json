@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.3",
+  "attestor": "jaywisdom.base",
+  "resolved_wallet": "0x0000000000000000000000000000000000000000",
+  "artifact_hash": "7d8f3e2a1b9c5d4e8f7a6b3c2d1e0f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e",
+  "event_type": "claim",
+  "weight": 1,
+  "timestamp": 1712351231,
+  "payload_hash": "",
+  "signature": "",
+  "event_id": ""
+}
