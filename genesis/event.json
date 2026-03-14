@@ -1,12 +1,15 @@
 {
   "schema_version": "0.3",
   "attestor": "jaywisdom.base",
-  "resolved_wallet": "0x0000000000000000000000000000000000000000",
+  "resolved_wallet": "0xfcad0b19bb29d4674531d6f115237e16afce377c",
   "artifact_hash": "7d8f3e2a1b9c5d4e8f7a6b3c2d1e0f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e",
+  "merkle_root": "abc123def4567890abc123def4567890abc123def4567890abc123def4567890",
   "event_type": "claim",
   "weight": 1,
   "timestamp": 1712351231,
-  "payload_hash": "",
-  "signature": "",
-  "event_id": ""
+  "chain_id": 8453,
+  "signing_scheme": "eip191",
+  "payload_hash": "2457b80f4270199c3d1035f107dd985d173a5dd205947078de1e968e88977f14",
+  "signature": "89fdc43911d40ce6df415d829854ee61c8174ebc0aa200be7a7201a3fd55e2195617c9cc575ecc26956d8afbb3009400caa74870bdf9474e19dfdb08bbf1a2f11c",
+  "event_id": "584a2b4ecfe5f7d31f50d8467ca879f2078889ef2f303dec672083e32809f8f6"
 }
