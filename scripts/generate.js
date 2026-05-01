@@ -4,9 +4,13 @@ import { ethers } from 'ethers';
 import canonicalize from 'canonicalize';
 import { commitClaim } from '../src/rmt.js';
 
-const wallet = new ethers.Wallet(
-  '0x0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef'
-);
+// DEMO_PRIVATE_KEY — DO NOT USE IN PRODUCTION.
+// This deterministic test key exists only so genesis examples are reproducible.
+// Real signing keys must be loaded outside this repository and must never be committed.
+const DEMO_PRIVATE_KEY = process.env.DEMO_PRIVATE_KEY ||
+  '0x0000000000000000000000000000000000000000000000000000000000000001';
+
+const wallet = new ethers.Wallet(DEMO_PRIVATE_KEY);
 
 const payload = {
   schema_version: '0.3',
