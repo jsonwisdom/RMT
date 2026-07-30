@@ -1,0 +1,56 @@
+{
+  "receipt_id": "JSONWISDOM-CROSSFOREST-FAULT-ANCHOR001-RMT-001",
+  "receipt_type": "cross_repository_pointer_mismatch",
+  "status": "REPAIRED_PENDING_MERGE_AND_VERIFICATION",
+  "severity": "ROOT_PROMOTION_BLOCKING",
+  "authority": false,
+  "mutation_policy": "append_only",
+  "detected_at": "2026-07-29T19:18:00-05:00",
+  "canonical": {
+    "artifact": "Anchor 001",
+    "repository": "jsonwisdom/Welcome-to-JSONWISDOM",
+    "commit": "13004719dd0c34f765ca95dfe8566b6feb2bf6cf",
+    "sha256_merkle_root": "ff55160908ff41d23f7af0df8873ef7a0dcf8163d1a308f58941e87b5a95bad9",
+    "keccak256_leaf": "0xb7e55f9e1f4f27cd96f38d74e510e184a14772ef3f9f628d5acc68531dd185d"
+  },
+  "observed": {
+    "repository": "jsonwisdom/RMT",
+    "path": "docs/ANCHOR_001_BOUNDARY.md",
+    "blob_sha_before_repair": "bc26c15736c3e8dd3da3ae4e4b1565fdd77a35b1",
+    "incorrect_keccak256_leaf": "0xb7e55f9e1f4f27cd96f38d74e6510e184a14772ef3f9f628d5acc68531dd185d"
+  },
+  "mismatch": {
+    "expected_segment": "d74e510e",
+    "observed_segment": "d74e6510e",
+    "equality": false
+  },
+  "impact": {
+    "rmt_internal_genesis_may_remain_valid": true,
+    "anchor_001_remains_canonical": true,
+    "cross_repository_boundary_failed": true,
+    "full_root_promotion_blocked": true
+  },
+  "root_cause": {
+    "status": "NOT_ESTABLISHED",
+    "candidate_classes": [
+      "COPY_ERROR",
+      "STALE_INTERMEDIATE",
+      "UNSYNCHRONIZED_POINTER"
+    ],
+    "git_blame": "PENDING"
+  },
+  "repair": {
+    "branch": "repair/anchor-001-boundary-pointer",
+    "boundary_fix_commit": "e690b98c6e4f822535c6707ff8f511940db92368",
+    "replacement_keccak256_leaf": "0xb7e55f9e1f4f27cd96f38d74e510e184a14772ef3f9f628d5acc68531dd185d",
+    "pr": "PENDING",
+    "merge_commit": null
+  },
+  "verification": {
+    "boundary_guard": "PENDING",
+    "rmt_verifier": "PENDING",
+    "canonical_recomputation": "PENDING",
+    "eas_attestation_impact": "UNKNOWN"
+  },
+  "doctrine": "Repair the pointer, not the root. Preserve the drift as a receipt. No silent edit. No fake green."
+}
