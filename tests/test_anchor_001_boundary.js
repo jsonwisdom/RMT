@@ -26,7 +26,7 @@ function extract(label) {
 const observed = {
   repository: extract('Source Repo'),
   commit: extract('Git Commit'),
-  sha256MerkleRoot: extract('Merkle Root \\(SHA-256\\)'),
+  sha256MerkleRoot: extract('Merkle Root (SHA-256)'),
   keccak256Leaf: extract('Leaf Keccak-256')
 };
 
