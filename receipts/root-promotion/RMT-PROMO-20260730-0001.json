@@ -1,0 +1,40 @@
+{
+  "receipt_id": "RMT-PROMO-20260730-0001",
+  "receipt_type": "root_promotion",
+  "issued_at": "2026-07-30T00:23:00Z",
+  "repository": "jsonwisdom/RMT",
+  "pull_request": 1,
+  "merge_commit": "df12e77ca02844542a391d582646aa350cd521a4",
+  "canonical_anchor": {
+    "repository": "jsonwisdom/Welcome-to-JSONWISDOM",
+    "commit": "13004719dd0c34f765ca95dfe8566b6feb2bf6cf",
+    "sha256_merkle_root": "ff55160908ff41d23f7af0df8873ef7a0dcf8163d1a308f58941e87b5a95bad9",
+    "keccak256_leaf": "0xb7e55f9e1f4f27cd96f38d74e510e184a14772ef3f9f628d5acc68531dd185d"
+  },
+  "repair": {
+    "boundary_file": "docs/ANCHOR_001_BOUNDARY.md",
+    "fault_receipt": "receipts/faults/anchor-001-boundary-mismatch-2026-07-29.json",
+    "guard": "tests/test_anchor_001_boundary.js",
+    "historical_fault_preserved": true,
+    "canonical_root_modified": false
+  },
+  "observations": {
+    "pr_merged": true,
+    "merged_boundary_value_inspected": true,
+    "merged_boundary_matches_pinned_canonical_value": true,
+    "github_workflow_runs_observed": 0,
+    "post_merge_full_replay_observed": false
+  },
+  "promotion_state": "MERGED_SENTINEL_PENDING",
+  "forest_state": "YELLOW",
+  "promotion_blocker": "Post-merge full RMT replay has not been observed through an accessible execution receipt.",
+  "required_sentinel": [
+    "node tests/test_anchor_001_boundary.js",
+    "./verifier.sh"
+  ],
+  "transition_rule": "Promote to FULLY_PROMOTED only after both post-merge commands pass against merge commit df12e77ca02844542a391d582646aa350cd521a4 and an execution receipt is preserved.",
+  "doctrine": "The mistake is canon, not erased. Repair the pointer, preserve the fault, and require observed replay before green.",
+  "authority": false,
+  "append_only": true,
+  "no_fake_green": true
+}
